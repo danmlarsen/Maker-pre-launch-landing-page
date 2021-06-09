@@ -1,0 +1,30 @@
+@use '../abstract' as *;
+
+.hero-section {
+    margin-bottom: 14.4rem;
+}
+
+.perks-section {
+    padding: 0 2.4rem;
+    margin-bottom: 14.4rem;
+}
+
+.plans-section {
+    padding: 0 2.4rem;
+    margin-bottom: 14.4rem;
+
+    &__title {
+        margin-bottom: 2rem;
+    }
+
+    &__title-container {
+        max-width: 57.3rem;
+        margin: 0 auto;
+        margin-bottom: 5.6rem;
+        text-align: center;
+
+        @include mq(desktop) {
+            margin-bottom: 10.5rem;
+        }
+    }
+}

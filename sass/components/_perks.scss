@@ -1,0 +1,94 @@
+@use '../abstract' as *;
+
+.perks {
+    text-align: center;
+    margin: 0 auto;
+
+    display: grid;
+    gap: 5.6rem;
+    
+    @include mq(tablet) {
+        max-width: 57.3rem;
+        justify-items: end;
+    }
+
+    @include mq(desktop) {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 111rem;
+    }
+}
+
+.perk {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    &__img {
+        width: 55%;
+    }
+
+    &__img-container {
+        display: flex;
+        width: 12.3rem;
+        height: 12rem;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-secondary;
+        border-radius: 40px;
+
+        transition: all .4s;
+
+        @include mq(desktop) {
+            width: 16rem;
+            height: 16.4rem;
+        }
+    }
+
+    &__title {
+        margin: 2rem 0;
+        color: $color-white;
+    }
+
+    // &__text {
+        
+    // }
+
+    &:hover &__img-container {
+        transform: translateY(-1rem) scale(1.1);
+    }
+
+    @include mq(tablet) {
+        grid-template-columns: min-content auto;
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 5rem;
+        width: 90%;
+        justify-items: left;
+        text-align: left;
+
+        &__title {
+            margin: 0;
+        }
+
+        &__img-container {
+            grid-row: span 2;
+        }     
+        
+        &:nth-child(2n) {
+            justify-self: start;
+        }
+    }
+
+    @include mq(desktop) {
+        height: 80%;
+        width: auto;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        row-gap: 3rem;
+
+        justify-self: start;
+
+        &:nth-child(2n) {
+            align-self: end;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@keyframes rubberband {
+    50% {
+        transform: scaleY(.8) scaleX(1.3);
+    }
+    75% {
+        transform: scaleY(1.1) scaleX(.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

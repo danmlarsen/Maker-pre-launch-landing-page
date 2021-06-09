@@ -1,0 +1,38 @@
+@use '../abstract' as *;
+
+.footer {
+    max-width: 170rem;
+    min-height: 20rem;
+    margin: 0 auto;
+    padding: 0 3rem;
+    padding-top: 2rem;
+    margin-bottom: 10rem;
+    background-image: url('../assets/bg-footer-squiggle.svg');
+    background-size: 100% 10rem;
+    background-position: top left;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        margin-bottom: 4.2rem;
+        text-align: center;
+
+        @include mq(desktop) {
+            margin-top: 5rem;
+        }
+    }
+
+    @include mq(tablet) {
+        background-size: contain;
+        background-position: center;
+    }
+
+    @include mq(desktop) {
+        padding: 5rem 3rem;
+        min-height: 30rem;
+    }
+}

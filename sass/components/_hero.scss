@@ -1,0 +1,95 @@
+@use '../abstract' as *;
+
+.hero {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    max-width: 171rem;
+    margin: 0 auto;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        max-width: 41rem;
+        height: 23.3rem;
+        margin-bottom: 5rem;
+
+        background-image: url('../assets/illustration-hero-mobile.png');
+        background-position: left;
+        background-size: 41rem;
+        background-repeat: no-repeat;
+    }
+
+    &__container {
+        max-width: 32rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__heading {
+        margin-bottom: 2.4rem;
+        padding: 0 3.5rem;
+    }
+
+    &__text {
+        margin-bottom: 3.2rem;
+
+        @include mq(desktop) {
+            max-width: 54rem;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__icon-scroll {
+        height: 4.2rem;
+        width: 2.6rem;
+        background-image: url('../assets/icon-scroll.svg');
+        background-size: cover;
+        cursor: pointer;
+    }
+
+    @include mq(tablet) {
+        min-height: 35.7rem;
+        grid-template-columns: 1fr 45.7rem 1fr;
+        gap: 1rem;
+        justify-items: normal;
+
+        &__container {
+            max-width: none;
+            justify-content: center;
+            background-image: url('../assets/bg-hero-squiggle.svg');
+            background-position: top center;
+            background-size: 38.6rem 26.8rem;
+            background-repeat: no-repeat;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            background-image: url('../assets/illustration-hero-left.svg');
+            background-position: top right;
+            background-size: cover;
+            margin: 0;
+            max-width: none;
+            height: auto;
+        }
+
+        &::after {
+            background-image: url('../assets/illustration-hero-right.svg');
+            background-position: top left;
+        }
+    }
+
+    @include mq(desktop) {
+        min-height: 45.9rem;
+        grid-template-columns: 1fr 73rem 1fr;
+        gap: 8rem;
+
+        &__container {
+            background-size: 54.4rem 37.8rem;
+        }
+    }
+}

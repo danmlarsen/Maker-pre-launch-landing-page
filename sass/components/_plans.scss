@@ -1,0 +1,118 @@
+@use '../abstract' as *;
+
+.plans {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq(desktop) {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.plan {
+    color: $color-white;
+    background-color: $color-secondary;
+    border-radius: 10px;
+    padding: 5rem 3rem;
+    text-align: left;
+    max-width: 44.5rem;
+
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 3rem;
+        transform: translateY(-50%);
+        height: 4.6rem;
+        width: 4.6rem;
+        background-image: url('../assets/icon-free.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transition: all .2s;
+    }
+
+    &:hover::before {
+        transform: translateY(-50%) scale(1.1);
+    }
+
+
+    &:not(:last-child) {
+        margin-bottom: 5.6rem;
+
+        @include mq(desktop) {
+            margin-bottom: 0;
+            margin-right: 3rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        color: $color-gray;
+    }
+
+    &__features {
+        list-style: none;
+
+        li {
+            &::before {
+                content: '';
+                display: inline-block;
+                height: 9px;
+                width: 12px;
+                margin-right: 1rem;
+                background-color: $color-tertiary;
+                -webkit-mask-image: url('../assets/icon-check.svg');
+                -webkit-mask-size: cover;
+                mask-image: url('../assets/icon-check.svg');
+                mask-size: cover;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    &__price {
+        font-size: 4rem;
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+
+        & span {
+            font-size: 1.5rem;
+            font-weight: 200;
+            margin-left: .5rem;
+        }
+    }
+
+    // &--free {
+
+    // }
+
+    &--paid {
+        background-color: $color-tertiary;
+        color: $color-primary;
+        padding: 6rem 3rem;
+
+        &::before {
+            background-image: url('../assets/icon-paid.svg');
+            width: 5.1rem;
+            height: 6.5rem;
+        }
+
+        li {
+            &::before {
+                background-color: $color-secondary;
+            }
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@use '../abstract' as *;
+
+.notify {
+    width: 100%;
+    max-width: 47.6rem;
+    min-height: 10rem;
+    display: grid;
+    gap: 2rem;
+
+    &__email {
+        padding: 1.5rem 2rem;
+    }
+
+    &__status {
+        color: $color-error;
+        font-size: 1.2rem;
+        margin: .5rem 0;
+        padding: 0 2rem;
+
+        &--hidden {
+            display: none;
+        }
+    }
+
+    &__submitted {
+        font-size: 1.5rem;
+        color: $color-white;
+        margin-top: -3rem;
+    }
+
+    @include mq(tablet) {
+        grid-template-columns: auto max-content;
+        align-items: start;
+    }
+}
