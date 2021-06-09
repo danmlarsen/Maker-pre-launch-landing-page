@@ -2,6 +2,10 @@
 
 .hero-section {
     margin-bottom: 14.4rem;
+
+    @include mq(tablet) {
+        margin-bottom: 10.9rem;
+    }
 }
 
 .perks-section {
@@ -20,7 +24,7 @@
     &__title-container {
         max-width: 57.3rem;
         margin: 0 auto;
-        margin-bottom: 5.6rem;
+        margin-bottom: 7.9rem;
         text-align: center;
 
         @include mq(desktop) {

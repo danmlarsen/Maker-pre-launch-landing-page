@@ -15,4 +15,8 @@
     @include mq(tablet) {
         text-align: left;
     }
+
+    @include mq(desktop) {
+        padding: 8rem 3rem;
+    }
 }

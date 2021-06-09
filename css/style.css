@@ -19,10 +19,12 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: 1.5rem;
   color: #777F98;
+  line-height: 1.6;
 }
 
 h1, h2, h3 {
   font-weight: 800;
+  line-height: 1.2;
 }
 
 p {
@@ -75,6 +77,11 @@ p {
 @media only screen and (min-width: 37.5em) {
   .header {
     text-align: left;
+  }
+}
+@media only screen and (min-width: 68.75em) {
+  .header {
+    padding: 8rem 3rem;
   }
 }
 
@@ -140,6 +147,11 @@ input.invalid {
 .hero-section {
   margin-bottom: 14.4rem;
 }
+@media only screen and (min-width: 37.5em) {
+  .hero-section {
+    margin-bottom: 10.9rem;
+  }
+}
 
 .perks-section {
   padding: 0 2.4rem;
@@ -156,7 +168,7 @@ input.invalid {
 .plans-section__title-container {
   max-width: 57.3rem;
   margin: 0 auto;
-  margin-bottom: 5.6rem;
+  margin-bottom: 7.9rem;
   text-align: center;
 }
 @media only screen and (min-width: 68.75em) {
@@ -187,7 +199,7 @@ input.invalid {
   display: grid;
   justify-items: center;
   text-align: center;
-  max-width: 171rem;
+  max-width: 154rem;
   margin: 0 auto;
 }
 .hero::before {
@@ -210,7 +222,17 @@ input.invalid {
 }
 .hero__heading {
   margin-bottom: 2.4rem;
-  padding: 0 3.5rem;
+  max-width: 25rem;
+}
+@media only screen and (min-width: 37.5em) {
+  .hero__heading {
+    max-width: 35rem;
+  }
+}
+@media only screen and (min-width: 68.75em) {
+  .hero__heading {
+    max-width: none;
+  }
 }
 .hero__text {
   margin-bottom: 3.2rem;
@@ -261,7 +283,7 @@ input.invalid {
 @media only screen and (min-width: 68.75em) {
   .hero {
     min-height: 45.9rem;
-    grid-template-columns: 1fr 73rem 1fr;
+    grid-template-columns: 1fr 56rem 1fr;
     gap: 8rem;
   }
   .hero__container {
@@ -278,6 +300,7 @@ input.invalid {
 @media only screen and (min-width: 37.5em) {
   .perks {
     max-width: 57.3rem;
+    gap: 4rem;
     justify-items: end;
   }
 }

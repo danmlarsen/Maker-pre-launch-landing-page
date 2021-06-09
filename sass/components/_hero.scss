@@ -4,7 +4,7 @@
     display: grid;
     justify-items: center;
     text-align: center;
-    max-width: 171rem;
+    max-width: 154rem;
     margin: 0 auto;
 
     &::before {
@@ -30,7 +30,15 @@
 
     &__heading {
         margin-bottom: 2.4rem;
-        padding: 0 3.5rem;
+        max-width: 25rem;
+
+        @include mq(tablet) {
+            max-width: 35rem;
+        }
+
+        @include mq(desktop) {
+            max-width: none;
+        }
     }
 
     &__text {
@@ -85,7 +93,7 @@
 
     @include mq(desktop) {
         min-height: 45.9rem;
-        grid-template-columns: 1fr 73rem 1fr;
+        grid-template-columns: 1fr 56rem 1fr;
         gap: 8rem;
 
         &__container {
