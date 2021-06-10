@@ -339,6 +339,9 @@ input.invalid {
   margin: 2rem 0;
   color: #fff;
 }
+.perk__text {
+  max-width: 32rem;
+}
 .perk:hover .perk__img-container {
   transform: translateY(-1rem) scale(1.1);
 }

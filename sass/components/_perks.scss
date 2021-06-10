@@ -50,9 +50,9 @@
         color: $color-white;
     }
 
-    // &__text {
-        
-    // }
+    &__text {
+        max-width: 32rem;        
+    }
 
     &:hover &__img-container {
         transform: translateY(-1rem) scale(1.1);
